@@ -194,6 +194,10 @@ main{
     .mobileNav.show{
         display: block;
     }
+
+    .techStack{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 //mobile
