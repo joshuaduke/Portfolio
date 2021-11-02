@@ -35,7 +35,7 @@ h1, h2, h3, h4, a{
 
 body{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: 'nav about';
     // grid-gap:10px;
 }
@@ -47,7 +47,7 @@ body{
 }
 
 aside{
-    width: 300px;
+    width: clamp(100px, 25vw, 300px);
     height:100vh;
     background-color: #e4e4e4;
 
@@ -134,20 +134,30 @@ main{
         text-align: center;
     }
 
-    // h1{
-    //     font-size: clamp(1em,  2.5vw, 2rem);
-    // }
-
     .description{
+        width: 90%;
         text-align: left;
+        line-height: 1.8rem;
     }
 
     .goToProjects{
         margin:20px 0;
 
+        h3{
+            margin:20px;
+        }
+
         button{
             margin:0 auto;
             padding: 15px 25px;
+            border:1px solid steelblue;
+            border-radius: 10px;
+            transition:all 0.3s;     
+            cursor:pointer;       
+            &:hover{
+                background-color:steelblue;
+                color:#fff;
+            }
         }
     }
 }
@@ -205,7 +215,7 @@ main{
 @media (max-width:768px) {
     body{
         display: block;
-        background-color:red;
+        background-color:steelblue;
         padding:30px;
     }
 
@@ -217,6 +227,14 @@ main{
         padding:0;
     }
 
+    .aboutMe{
+        .description{
+            width: 100%;
+            text-align: left;
+            line-height: 1.8rem;
+        }
+    }
+
     .hamburger{
         display: block;
     }
@@ -225,12 +243,27 @@ main{
         display: block;
     }
 
+    #hamburgerMenu{
+        .fa-times.show{
+            display: block;
+        }
+    
+        .fa-bars.show{
+            display: none;
+        }
+    }
+
+
+
     .techStack{
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 20px;
     }
 }
 
+.hide{
+    display: none;
+}
 //mobile
 // @media (max-width:767px) {
 //     body{

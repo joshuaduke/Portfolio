@@ -33,8 +33,8 @@ h1, h2, h3, h4, a {
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
       grid-template-areas: 'nav about';
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 aside {
-  width: 300px;
+  width: clamp(100px, 25vw, 300px);
   height: 100vh;
   background-color: #e4e4e4;
 }
@@ -140,16 +140,32 @@ main h1 {
 }
 
 .aboutMe .description {
+  width: 90%;
   text-align: left;
+  line-height: 1.8rem;
 }
 
 .aboutMe .goToProjects {
   margin: 20px 0;
 }
 
+.aboutMe .goToProjects h3 {
+  margin: 20px;
+}
+
 .aboutMe .goToProjects button {
   margin: 0 auto;
   padding: 15px 25px;
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.aboutMe .goToProjects button:hover {
+  background-color: steelblue;
+  color: #fff;
 }
 
 .mobileNav {
@@ -202,7 +218,7 @@ main h1 {
 @media (max-width: 768px) {
   body {
     display: block;
-    background-color: red;
+    background-color: steelblue;
     padding: 30px;
   }
   aside {
@@ -211,16 +227,31 @@ main h1 {
   main {
     padding: 0;
   }
+  .aboutMe .description {
+    width: 100%;
+    text-align: left;
+    line-height: 1.8rem;
+  }
   .hamburger {
     display: block;
   }
   .mobileNav.show {
     display: block;
   }
+  #hamburgerMenu .fa-times.show {
+    display: block;
+  }
+  #hamburgerMenu .fa-bars.show {
+    display: none;
+  }
   .techStack {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
   }
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */
