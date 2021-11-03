@@ -23,7 +23,7 @@ li{
     list-style-type: none;
 }
 
-p{
+p, li{
     font-family: $pFonts;
     font-weight: 400;
 }
@@ -33,25 +33,21 @@ h1, h2, h3, h4, a{
     font-weight: 700;
 }
 
-body{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: 'nav about';
-    // grid-gap:10px;
-}
-
-.logo{
+.logoImg{
     position: absolute;
     top:0;
     left:0;
+    z-index: 1000;
 }
 
 aside{
     width: clamp(100px, 25vw, 300px);
-    height:100vh;
+    height: clamp(100%, 100vh, 100vh);
     background-color: #e4e4e4;
-
-
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 0;
 
     nav{
         height:80vh;
@@ -117,8 +113,9 @@ footer{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding:30px;
+    margin-left:25vw;
 
     h1{
         text-align: center;
@@ -143,7 +140,7 @@ main{
     .goToProjects{
         margin:20px 0;
 
-        h3{
+        h2{
             margin:20px;
         }
 
@@ -225,6 +222,7 @@ main{
 
     main{
         padding:0;
+        margin-left: 0;
     }
 
     .aboutMe{
