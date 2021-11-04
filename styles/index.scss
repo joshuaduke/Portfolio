@@ -41,6 +41,7 @@ h1, h2, h3, h4, a{
 }
 
 body{
+    // background-color: #1F1F1F;
     background-color: #EFF2F5;
 }
 
@@ -90,6 +91,7 @@ aside{
     border:0;
     color:#fff;
     font-size: 20px;
+
     
     .fa-bars, .fa-times{
         position: relative;
@@ -133,8 +135,12 @@ main{
     border-radius: 5px;
     box-shadow: 1px 5px 10px #000;
 
-    h1, .goToProjects{
+    h1 {
         text-align: center;
+    }
+
+    h3{
+        margin:10px 0;
     }
 
     .description{
@@ -152,8 +158,8 @@ main{
 
         button{
             margin:0 auto;
-            padding: 15px 25px;
-            border:1px solid steelblue;
+            padding: 10px 15px;
+            border:1px solid #fff;
             border-radius: 10px;
             transition:all 0.3s;     
             cursor:pointer;       
@@ -163,11 +169,6 @@ main{
             }
         }
     }
-}
-
-.techSkills{
-    margin:20px 0;
-    padding:30px 20px;
 }
 
 .mobileNav{
@@ -180,8 +181,6 @@ main{
     border-top-left-radius: 1000%;
     background-color: #000;
     text-align: right;
-
-
     
     ul{
         margin: 30px 0;
@@ -193,21 +192,39 @@ main{
 
     a{
         color:#fff;
+        &:hover{
+            color:red;
+        }
+    }
+}
+
+.techSkills{
+    margin:20px 0;
+    padding:30px 0;
+
+    h2{
+        padding:20px 0;
     }
 }
 
 .techStack{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
     text-align: center;
 
     .skillContainer{
         background-color:steelblue;
         padding:10px ;
-        margin: 10px;
+        // margin: 10px;
         border-radius:5px;
         color:#e4e4e4;
         box-shadow: 2px 2px 5px #000;
+        transition:all 0.3s;
+
+        &:hover{
+            transform: scale(1.05);
+        }
 
         i{
             width: 100px;
@@ -313,3 +330,6 @@ main{
 .hide{
     display: none;
 }
+
+
+//Don't forget to add styles for 4k
