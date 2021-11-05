@@ -30,28 +30,34 @@ main{
         height:100%;
     }
 
-    ol.prjTags{
+    ol.prjTags, ul.prjLinks{
         padding:10px;
         width: 100%;
-        text-align: center;
         display: flex;
-        justify-content: space-around;
-        font-size: clamp(0.5em, 0.8vw, 1em);
+        
+        
         // font-size: 0.5em;
+    }
 
+    ul.prjLinks{
+        justify-content: space-around;
+    }
+
+
+    ol.prjTags{
         li{
             display: inline;
-            border:1px solid #D84A24;
-            padding:5px 10px;
+            padding:5px 5px 0 0;
             border-radius:5px;
             font-weight: bold;
+            font-size:0.8em;
         }
     }
 }
 
 @media (max-width:1200px){
     main{
-        padding: 30px 70px;
+        // padding: 30px 70px;
 
         .projectsContainer{
             grid-template-columns: repeat(2, 1fr);
@@ -61,7 +67,7 @@ main{
 
 @media (max-width:768px) {
     body{
-        padding:30px 10px;
+        // padding:30px 10px;
     }
     
     main{
@@ -72,6 +78,12 @@ main{
 
         .projectsContainer{
             grid-template-columns: repeat(1, 1fr);
+            // padding:60px
+            
+            .prjCard{
+                max-width:550px;
+                width:100%;
+            }
         }
     }
 }
