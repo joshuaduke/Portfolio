@@ -1,3 +1,9 @@
+$primary: #1C5D99;
+$primaryVariant:#BBCDE5 ;
+$secondary: #BE7C4D;
+$background: #222 ;
+$text:#fff ;
+
 main{
     justify-content: start;
 
@@ -10,7 +16,7 @@ main{
     }
 
     .prjCard{
-        background-color: #e4e4e4;
+        background-color: $primary;
         border-radius: 5px;
         box-shadow: 1px 1px 1px #000;
         padding:10px;
@@ -20,6 +26,7 @@ main{
     }
 
     .prjTitle{
+        text-align: center;
         margin:10px 0;
         padding: 10px 0;
     }
@@ -51,6 +58,7 @@ main{
             border-radius:5px;
             font-weight: bold;
             font-size:0.8em;
+            color:$secondary;
         }
     }
 }

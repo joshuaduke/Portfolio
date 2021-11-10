@@ -1,9 +1,3 @@
-/*
-    Primary
-    Secondary
-    Background
-    Accent
-*/
 * {
   margin: 0;
   padding: 0;
@@ -146,8 +140,8 @@ main h1 {
   background-color: #1C5D99;
   padding: 50px 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 3px 10px #000;
-          box-shadow: 1px 3px 10px #000;
+  -webkit-box-shadow: 1px 3px 5px #000;
+          box-shadow: 1px 3px 5px #000;
 }
 
 .aboutMe h1 {
@@ -275,7 +269,7 @@ main h1 {
 
 @media (max-width: 968px) {
   .logoImg {
-    left: 3vw;
+    left: 4vw;
     font-size: .8em;
   }
   .techStack {
@@ -292,6 +286,7 @@ main h1 {
   }
   .logoImg {
     position: absolute;
+    left: 6vw;
   }
   aside {
     display: none;

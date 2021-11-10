@@ -1,22 +1,12 @@
 $headerFonts :'Montserrat', sans-serif;
 $pFonts :'Roboto', sans-serif;
 
-/*
-    Primary
-    Secondary
-    Background
-    Accent
-*/
 
 $primary: #1C5D99;
 $primaryVariant:#BBCDE5 ;
 $secondary: #BE7C4D;
 $background: #222 ;
 $text:#fff ;
-
-
-// $pFonts :'Montserrat', sans-serif;
-// $headerFonts :'Roboto', sans-serif;
 
 *{
     margin:0;
@@ -153,7 +143,7 @@ main{
     background-color: $primary;
     padding:50px 20px;
     border-radius: 5px;
-    box-shadow: 1px 3px 10px #000;
+    box-shadow: 1px 3px 5px #000;
 
     h1 {
         text-align: center;
@@ -276,7 +266,7 @@ main{
 
 @media (max-width:968px){
     .logoImg{
-        left:3vw;
+        left:4vw;
         font-size: .8em;
     }
 
@@ -295,6 +285,7 @@ main{
 
     .logoImg{
         position: absolute;
+        left:6vw;
     }
 
     aside{
