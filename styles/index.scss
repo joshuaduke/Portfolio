@@ -1,6 +1,20 @@
 $headerFonts :'Montserrat', sans-serif;
 $pFonts :'Roboto', sans-serif;
 
+/*
+    Primary
+    Secondary
+    Background
+    Accent
+*/
+
+$primary: #1C5D99;
+$primaryVariant:#BBCDE5 ;
+$secondary: #BE7C4D;
+$background: #222 ;
+$text:#fff ;
+
+
 // $pFonts :'Montserrat', sans-serif;
 // $headerFonts :'Roboto', sans-serif;
 
@@ -14,8 +28,9 @@ $pFonts :'Roboto', sans-serif;
 a{
     text-decoration: none;
     transition: all 0.5s;
+    color:$primaryVariant;
     &:hover{
-        color:red;
+        color:$secondary;
     }
 }
 
@@ -33,6 +48,11 @@ h1, h2, h3, h4, a{
     font-weight: 700;
 }
 
+h1, h2, h3{
+    color:$text;
+}
+
+
 .logoImg{
     position: fixed;
     top:20px;
@@ -42,13 +62,13 @@ h1, h2, h3, h4, a{
 
 body{
     // background-color: #1F1F1F;
-    background-color: #EFF2F5;
+    background-color: $background;
 }
 
 aside{
     width: clamp(100px, 23vw, 300px);
     height: clamp(100%, 100vh, 100vh);
-    background-color: #e4e4e4;
+    background-color: $primary;
     position: fixed;
     top:0;
     left:0;
@@ -77,7 +97,7 @@ aside{
     width:60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: $secondary;
     position: fixed;
     bottom:10px;
     left: 83vw;
@@ -130,10 +150,10 @@ main{
 }
 
 .aboutMe{
-    background-color: steelblue;
+    background-color: $primary;
     padding:50px 20px;
     border-radius: 5px;
-    box-shadow: 1px 5px 10px #000;
+    box-shadow: 1px 3px 10px #000;
 
     h1 {
         text-align: center;
@@ -161,10 +181,11 @@ main{
             padding: 10px 15px;
             border:1px solid #fff;
             border-radius: 10px;
-            transition:all 0.3s;     
+            transition:all 0.3s;  
+            background-color: $primaryVariant;   
             cursor:pointer;       
             &:hover{
-                background-color:steelblue;
+                background-color:$secondary;
                 color:#fff;
             }
         }
@@ -179,7 +200,7 @@ main{
 
     padding:40px 20px 40px 100px;
     border-top-left-radius: 1000%;
-    background-color: #000;
+    background-color: $secondary;
     text-align: right;
     
     ul{
@@ -191,9 +212,9 @@ main{
     }
 
     a{
-        color:#fff;
+        color:$text;
         &:hover{
-            color:red;
+            color:$primaryVariant;
         }
     }
 }
@@ -214,11 +235,11 @@ main{
     text-align: center;
 
     .skillContainer{
-        background-color:steelblue;
+        background-color:$primary;
         padding:10px ;
         // margin: 10px;
         border-radius:5px;
-        color:#e4e4e4;
+        color:$text;
         box-shadow: 2px 2px 5px #000;
         transition:all 0.3s;
 
