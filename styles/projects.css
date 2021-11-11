@@ -30,6 +30,13 @@ main .prjCard {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .prjCard:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 main .prjTitle {

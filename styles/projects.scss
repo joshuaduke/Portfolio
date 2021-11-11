@@ -23,6 +23,11 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition:all 0.3s;
+
+        &:hover{
+            transform: scale(1.03);
+        }
     }
 
     .prjTitle{
